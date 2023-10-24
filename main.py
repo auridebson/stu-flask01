@@ -5,7 +5,8 @@ app = flask.Flask(__name__)
 @app.route('/')
 @app.route('/index')
 def index():
-    return flask.render_template('index.html')
+    nomes = ['auridebson', 'luciana', 'levy', 'guilherme', 'angelina', 'thobias', 'zoe']
+    return flask.render_template('index.html',nomes=nomes)
 
 @app.route('/about')
 def about():
@@ -13,3 +14,4 @@ def about():
 
 if __name__ == '__main__':
     app.run(debug=True)
+
